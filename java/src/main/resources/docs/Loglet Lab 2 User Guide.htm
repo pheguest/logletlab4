@@ -1,0 +1,318 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0056)http://phe.rockefeller.edu/LogletLab/2.0/docs/index.html -->
+<HTML><HEAD><TITLE>Loglet Lab 2 User Guide</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="Loglet Lab 2 User Guide_files/styles-site.css" type=text/css 
+rel=stylesheet>
+<META content="MSHTML 6.00.2800.1276" name=GENERATOR></HEAD>
+<BODY>
+<DIV class=header>
+<DIV style="FONT-SIZE: 14pt; FONT-FAMILY: serif"><A 
+href="http://phe.rockefeller.edu/index.html">Program for the Human 
+Environment</A> - <A href="http://www.rockefeller.edu/">The Rockefeller 
+University</A> </DIV>1230 York Avenue, Box 234, New York, NY 
+10021-6399<BR><I>phone:</I> (212) 327-7917 - <I>fax:</I> (212) 327-7519 - 
+<I>e-mail:</I> <A 
+href="mailto:phe@mail.rockefeller.edu">phe@mail.rockefeller.edu</A> 
+<HR style="BORDER-TOP: #fff 1px solid" width=640>
+
+<P><A href="http://phe.rockefeller.edu/index.html">HOME</A> - <A 
+href="http://phe.rockefeller.edu/whats_new.html">What's new</A> - <A 
+href="http://phe.rockefeller.edu/biblio.html">Publications</A> - <A 
+href="http://phe.rockefeller.edu/LogletLab/">Loglet Lab</A> - <A 
+href="http://phe.rockefeller.edu/otherlinks.html">Related links</A> </P></DIV>
+<H1><IMG src="Loglet Lab 2 User Guide_files/ll_icon.gif" align=center> Loglet 
+Lab 2 User Guide</H1>
+<DIV class=bodytext>
+<P>Loglet Lab 2 is a Java version of the original Loglet Lab software, rewritten 
+from the ground up. Loglet Lab is also available at no cost under a BSD-like 
+license, so it can be used on any platform that supports Java, including 
+Windows, Mac OS X, and Linux. </P>
+<P>The purpose of this document is to guide you through the installation and 
+basic use of Loglet Lab. For more information on how to use logistic anlaysis, 
+you should read through the <A 
+href="http://phe.rockefeller.edu/LogletLab/#Documentation">Logistics Primer and 
+original tutorial</A>. </P>
+<H2>Contents</H2>
+<OL>
+  <LI><A 
+  href="http://phe.rockefeller.edu/LogletLab/2.0/docs/index.html#license">License</A> 
+
+  <LI>Installation 
+  <OL>
+    <LI><A 
+    href="http://phe.rockefeller.edu/LogletLab/2.0/docs/index.html#sysreq">System 
+    requirements</A> 
+    <LI><A 
+    href="http://phe.rockefeller.edu/LogletLab/2.0/docs/index.html#download">Download 
+    and install</A> </LI></OL>
+  <LI>Your first loglet 
+  <OL>
+    <LI><A 
+    href="http://phe.rockefeller.edu/LogletLab/2.0/docs/index.html#startup">Starting 
+    up</A> 
+    <LI><A 
+    href="http://phe.rockefeller.edu/LogletLab/2.0/docs/index.html#newdoc">New 
+    document/edit plot info</A> 
+    <LI><A 
+    href="http://phe.rockefeller.edu/LogletLab/2.0/docs/index.html#enterdata">Enter 
+    data</A> 
+    <LI><A 
+    href="http://phe.rockefeller.edu/LogletLab/2.0/docs/index.html#doafit">Do a 
+    fit</A> 
+    <LI><A 
+    href="http://phe.rockefeller.edu/LogletLab/2.0/docs/index.html#saving">Save 
+    your work</A> </LI></OL>
+  <LI>Features 
+  <OL>
+    <LI><A 
+    href="http://phe.rockefeller.edu/LogletLab/2.0/docs/index.html#logistic">Logistic 
+    fits</A> 
+    <LI><A 
+    href="http://phe.rockefeller.edu/LogletLab/2.0/docs/index.html#multi">Multiple 
+    data sets</A> 
+    <LI><A 
+    href="http://phe.rockefeller.edu/LogletLab/2.0/docs/index.html#logsub">Logistic 
+    substitution</A> 
+    <LI><A 
+    href="http://phe.rockefeller.edu/LogletLab/2.0/docs/index.html#autoscale">Turning 
+    off autoscaling</A> 
+    <LI><A 
+    href="http://phe.rockefeller.edu/LogletLab/2.0/docs/index.html#printing">Printing 
+    and export</A> </LI></OL>
+  <LI><A 
+  href="http://phe.rockefeller.edu/LogletLab/2.0/docs/index.html#reading">Further 
+  reading</A> </LI></OL><A name=license></A>
+<H1>License</H1>
+<P>Copyright (c) 2003, Program for the Human Environment, The Rockefeller 
+University, except where noted. All rights reserved. </P>
+<P>Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are met: </P>
+<OL>
+  <LI>Redistributions of source code must retain the above copyright notice, 
+  this list of conditions and the following disclaimer. 
+  <LI>Redistributions in binary form must reproduce the above copyright notice, 
+  this list of conditions and the following disclaimer in the documentation 
+  and/or other materials provided with the distribution. 
+  <LI>Neither the name of The Program for the Human Environment nor The 
+  Rockefeller University nor the names of its contributors may be used to 
+  endorse or promote products derived from this software without specific prior 
+  written permission. </LI></OL>
+<P>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE 
+DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY 
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES 
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON 
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </P>
+<H1>Installation</H1><A name=sysreq></A>
+<H2>System Requirements</H2>
+<P>Again, because Loglet Lab is written entirely in Java, it can be used on any 
+platform that supports Java. We have tested it on Windows 98, 2000, Mac OS X, 
+and RedHat Linux.</P>
+<P>To use Loglet Lab 2.x, you will need at least 32 MB RAM (128 recommended) and 
+about 1 MB free space on your hard drive. In addition, you must have a <B>Java 
+Runtime Environment (JRE)</B> v 1.4.1 or later. This will require another 50 MB 
+free space on your hard drive.</P>
+<H3>Getting a JRE</H3>
+<UL>
+  <LI><B>Windows or Linux users</B>: Java 1.4.1 JRE can be downloaded from Sun 
+  at <A 
+  href="http://java.sun.com/j2se/1.4.1/download.html">http://java.sun.com/j2se/1.4.1/download.html</A>. 
+  Look under "Download J2SE", and click on "DOWNLOAD" under "JRE", as 
+  highlighted in the screenshot below. You do not need the full SDK.<BR><IMG 
+  alt="We recommend you download the JRE and not the full SDK." 
+  src="Loglet Lab 2 User Guide_files/jdk_screenshot.png" border=2> 
+  <LI><B>Mac OS X users:</B> Java support is built into the OS; if you are 
+  running 10.2.x (Jaguar), you should run Software Update to upgrade to Java 
+  1.4.1 if you haven't already. </LI></UL><A name=download></A>
+<H2>Download and Install</H2>
+<P>Go to <A 
+href="http://phe.rockefeller.edu/LogletLab/2.0/download.html">http://phe.rockefeller.edu/LogletLab/2.0/download.html</A> 
+to get the Loglet Lab package for your operating system. Windows and Mac users 
+can get an installer which will automate most of the installation. Linux/Unix 
+users can get a TAR file which contains all of the necessary files to run Loglet 
+Lab 2 (excluding the JRE). 
+<H3>Windows</H3>
+<P>If you have a beta version of Loglet Lab 2 already installed on your machine, 
+we recommend uninstalling it. <I>Loglet Lab 2 will not affect Loglet Lab 1 
+(a.k.a. "Loglet Lab for Windows").</I></P>
+<P>To install Loglet Lab 2, double-click on 
+LL-&lt;<I>version-number</I>&gt;-install.exe. The installer will guide you 
+through the installation process; most users should be able to use the default 
+options. The installer creates an icon in your desktop and a group in your 
+Programs menu, which includes a link to an uninstaller. </P>
+<DIV align=center><IMG src="Loglet Lab 2 User Guide_files/window_desktop.gif"> 
+<P style="FONT-WEIGHT: bold; FONT-SIZE: small">The Loglet Lab icon an a 
+desktop.</P></DIV>
+<H3>Mac OS X</H3>
+<P>Double click on LogletLab-&lt;<I>version-number</I>&gt;.dmg. This will mount 
+the LogletLab image (a disk icon) on your desktop. Double-click on that, and 
+that will open a new Finder window with LogletLab.pkg. 
+<DIV align=center><IMG src="Loglet Lab 2 User Guide_files/Installer1.png">
+<P style="FONT-WEIGHT: bold; FONT-SIZE: small">The Loglet Lab disk 
+image.</P></DIV>Double-click on LogletLab.pkg to run the installer, which will 
+lead you through the steps to install LogletLab. 
+<DIV align=center><IMG src="Loglet Lab 2 User Guide_files/Installer.png">
+<P style="FONT-WEIGHT: bold; FONT-SIZE: small">The Loglet Lab Installer for Mac 
+OS X.</P></DIV>
+<P></P>
+<H3>Linux/Unix</H3>
+<P>The Linux/Unix tarball will create a directory called "ll2/" and put all of 
+the necessary files in there. 
+<OL>
+  <LI>Open up a terminal a terminal window. 
+  <LI>Make sure Java is available on your machine:<BR><TT>java -version</TT> 
+  <LI><TT>cd &lt;directory where tarball was saved&gt;</TT> 
+  <LI>Unzip the tarball:<BR><TT>tar xzf 
+  LogletLab2_&lt;<I>version-number</I>&gt;.tar.gz</TT> (gzip version)<BR><TT>tar 
+  xjf LogletLab2_&lt;<I>version-number</I>&gt;.tar.bz2</TT> (bzip2 
+  version)<BR></LI></OL>
+<H1>Your first loglet</H1><A name=startup></A>
+<H2>Starting the application</H2>
+<H3>Windows</H3>
+<P>To run Loglet Lab, double-click on the "Loglet Lab 2" icon on your desktop, 
+which you can also find in your Start Menu under "Start &gt; Programs &gt; 
+Loglet Lab 2".</P>
+<H3>Mac OS X</H3>
+<P>Double-click on the LogletLab icon in the install directory to launch.</P>
+<H3>Linux/Unix</H3>
+<P>In the ll2 directory, type <TT>./startLogletLab.sh</TT> to launch Loglet Lab. 
+</P><A name=newdoc></A>
+<H2>New document/edit plot info</H2>
+<P>Loglet Lab opens the last document you last opened or saved by default. If 
+this is your first time running Loglet Lab, the program will create a new 
+document. At that time, it will also ask you for the title and axis labels. If 
+you want to change these later, you can do so by going into the <B>Edit</B> menu 
+and selecting <B>Plot Info...</B>.</P>
+<DIV align=center><IMG src="Loglet Lab 2 User Guide_files/new_doc.gif"> 
+<P style="FONT-WEIGHT: bold; FONT-SIZE: small">The New Document/Edit Plot Info 
+dialog.</P></DIV>
+<H3>Open a document</H3>Alternatively, if you already have data in a text file 
+or Excel spreadsheet, you can open that file. Go to the <B>File</B> menu and 
+select <B>Open...</B> In the Open dialog, choose <B>All importable files</B> or 
+<B>All files</B>, select the file (e.g."Sunflower.xls"), then click <B>Open</B>. 
+
+<DIV align=center><IMG src="Loglet Lab 2 User Guide_files/open_dialog.png"> 
+<P style="FONT-WEIGHT: bold; FONT-SIZE: small">The Open dialog window.</P></DIV>
+<P>To import correctly, the file must follow a strict format. Excel (XLS) files 
+should have two columns per data set, and text files should have one (x,y) point 
+per line, separated by commas or whitespace or both. </P><A name=enterdata></A>
+<H2>Enter data</H2>
+<P>Entering data in LL2 is straightforward: enter x and y values in the grid. 
+When you enter an x or y value to the last row, a new row will automatically be 
+added to the table. You can also paste data from a spreadsheet or text file 
+(using the same format as per above).</P>
+<P>If you want to exclude a data point (say, to mask an outlier), check the box 
+in the <B>Exclude?</B> column. The corresponding point will be drawn in red.</P>
+<P></P><A name=doafit></A>
+<H2>Do a fit</H2>
+<P>Fitting models are objects in the new Loglet Lab, so one could conceivably 
+add different models (for example, simple least-squares regression) to the 
+program. Currently, the only fit models are the two from the original version, 
+logistic curves and logistic substitution.</P>
+<P>To add a logistic curve to the plot, select <B>Fit Logistic</B> or <B>Fit 
+Bilogistic</B> from the <B>Fit</B> menu. A panel will be created above the 
+graph, showing the parameters. Loglet Lab will try to make a first guess at 
+parameters, but you will probably have to refine them, either by clicking on the 
+<B>Fit</B> button and letting Loglet Lab run its fitting algorithm, or by 
+entering new values or using the spinners (the arrows on the right of the text 
+field). Note that Loglet Lab's fitting algorithm is iterative; you may have to 
+click on the Fit button a few times before it converges on its best value.</P>
+<DIV align=center><IMG 
+src="Loglet Lab 2 User Guide_files/sunflower_first_fit.gif">
+<P style="FONT-WEIGHT: bold; FONT-SIZE: small">Sunflower data, with the first 
+guess from Loglet Lab. To get a better fit, click on the Fit button.</P><IMG 
+src="Loglet Lab 2 User Guide_files/nukes_fitted.gif">
+<P style="FONT-WEIGHT: bold; FONT-SIZE: small">Nuclear testing data with the 
+final parameters.</P></DIV><A name=saving></A>
+<H2>Save your work</H2>
+<P>To save your work, go to the <B>File</B> menu and select <B>Save</B>. This 
+will open a standard file dialog in which you specify the name of your file. 
+Loglet Lab 2 saves it as an XML document, and will append an ".xml" extension if 
+none is entered in the Save dialog. </P>
+<H1>Features</H1><A name=logistic></A>
+<H2>Logistic curve fitting</H2>
+<H3>Bootstrapping</H3>
+<P>After a fit, Loglet Lab will show a gray region which reflects the 
+statistical confidence of the estimated parameters. See the Primer for a more 
+detailed explanation of bootstrapping. This was a suppplemental feature in the 
+original version, but in the current version it is now done automatically.</P>
+<H3>Transforms</H3>
+<P>When you have a logistic curve on the plot, you can transform the data to get 
+alternate views of the model. <B>Decomposed</B> separates the logistic 
+components and data and plots them separately. <B>Fisher-Pry</B> also decomposes 
+the components and data, but it also normalizes the data to compare 
+characteristics of growth. <B>Bell curves</B> shows the rate of change of each 
+component.</P>
+<H3>Constrained parameters</H3>
+<P>To hold a parameter to a fixed value, check the box next to that parameter. 
+When you click on the Fit button, the fitting alorithm will keep the value 
+constant and fit the other parameters. Note that checking the box will not 
+prevent you from changing the value manually, i.e., by entering a new value or 
+clicking on its spinner.</P>
+<H3>CM method</H3>
+<P>The <B>CM</B> button refers to a method used by Cesare Marchetti where data 
+is transformed into Fisher-Pry and parameters are derived through least-squares 
+regression. It is currently inactive, pending implementation.</P><A 
+name=multi></A>
+<H2>Multiple data sets</H2>
+<P>To another data set to the plot, go to the <B>Edit</B> menu and select <B>Add 
+Data Set...</B>. Loglet Lab will ask you to name the new data set; you can 
+change this name later via the Edit Plot Info dialog. Loglet Lab will create a 
+second tab in the data pane on the left side of the window. To switch between 
+data sets, click on the tabs above the table grid. That is, if you click on a 
+tab, its data will be shown in the grid. </P><A name=logsub></A>
+<H2>Logistic substitution</H2>
+<P>To do logistic substitution, you first must have more than one data set. Go 
+to the <B>Fit</B> menu and select <B>Logistic Substitution</B>. This will add 
+the Logistic Substitution panel above the plot, and transform the data into 
+market shares. In the Logistic Substitution model, trend lines are fitted to 
+either the ascending or descending set of data, so, in the panel, you need to 
+specify start and stop times between which a line would be fitted. Always fit to 
+an ascending part when one is available. 
+<DIV align=center><IMG src="Loglet Lab 2 User Guide_files/recmedia_logsub.gif">
+<P style="FONT-WEIGHT: bold; FONT-SIZE: small">Recording media</P></DIV>
+<P></P><A name=autoscale></A>
+<H2>Turning off autoscaling on the ranges</H2>
+<P>To set the scale of an axis manually, go to the <B>Edit</B> menu and select 
+<B>Plot Info...</B>. In the section for the axis that you wish to change, check 
+the box next to <B>min</B> and enter the minimum and maximum for the axis. To 
+turn autoscaling on again, re-open the Edit Plot Info dialog and uncheck the 
+box.</P><A name=printing></A>
+<H2>Printing and Exporting</H2>
+<P>You can print a hard copy by going to the <B>File</B> menu and selecting 
+<B>Print</B>. This opens the Print Setup dialog, then the Print dialog. (This is 
+a workaround, because Windows does not keep the orientation selection from the 
+Print dialog.)</P>
+<P>To export the plot for using it on a web page or another program like 
+PowerPoint, go to the <B>File</B> menu and select <B>Export</B>. Loglet Lab will 
+open a standard file dialog where you can enter the name of the file. Currently, 
+Loglet Lab can only export Portable Network Graphics (PNG) images, 800 x 600 
+pixels. PNG is supported in most programs and web browsers. </P><A 
+name=reading></A>
+<H1>Further reading</H1>You may want to consult <A 
+href="http://phe.rockefeller.edu/LogletLab/#Documentation">our papers on 
+logistic analysis</A>. 
+<H1>Comments?</H1>
+<P>Please send feedback to &lt;<A 
+href="mailto:loglet@phe.rockefeller.edu">loglet@phe.rockefeller.edu</A>&gt;.</P>
+<HR>
+Excel and PowerPoint are trademarks of Microsoft. 
+<HR>
+
+<P><A href="http://phe.rockefeller.edu/LogletLab">Return to Loglet Lab Home 
+Page</A></P></DIV>
+<P class=footer>URL: http://phe.rockefeller.edu/LogletLab/2.0/index.html<BR>Last 
+updated: Wednesday, 05-Nov-2003 19:29:50 EST </P>
+<P style="BORDER-TOP: #999 1px solid; FONT-SIZE: 10pt; PADDING-TOP: 10px" 
+align=center>Program for the Human Environment, The Rockefeller 
+University<BR>1230 York Avenue, Box 234, New York, NY 
+10021-6399<BR><I>phone:</I> (212) 327-7917 - <I>fax:</I> (212) 327-7519 - 
+<I>e-mail:</I> <A 
+href="mailto:phe@mail.rockefeller.edu">phe@mail.rockefeller.edu</A><BR><IMG 
+alt="The Rockefeller University" 
+src="Loglet Lab 2 User Guide_files/rulogo_sml.png" border=0> </P></BODY></HTML>

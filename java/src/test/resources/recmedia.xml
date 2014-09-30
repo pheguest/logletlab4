@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LogletLabDocument>
+  <TITLE>Recording Media</TITLE>
+  <DOMAIN>time</DOMAIN>
+  <RANGE>thousands of units sold</RANGE>
+  <table name="Data Set">
+    <Column name="time" type="double" />
+    <Column name="thousands of units sold" type="double" />
+    <Column name="exclude" type="boolean" />
+    <stream delimiter=",">
+	1975.0,257000.0,false,
+	1976.0,273000.0,false,
+	1977.0,344000.0,false,
+	1978.0,341300.0,false,
+	1979.0,318300.0,false,
+	1980.0,322800.0,false,
+	1981.0,295200.0,false,
+	1982.0,243900.0,false,
+	1983.0,209600.0,false,
+	1984.0,204600.0,false,
+	1985.0,167000.0,false,
+	1986.0,125200.0,false,
+	1987.0,107000.0,false,
+	1988.0,72400.0,false,
+	1989.0,34600.0,false,
+	1990.0,11700.0,false,
+	1991.0,4800.0,false,
+	1992.0,2300.0,false,
+	1993.0,1200.0,false,
+	1994.0,1900.0,false,
+	1995.0,2200.0,false,
+</stream>
+  </table>
+  <table name="Data Set">
+    <Column name="time" type="double" />
+    <Column name="thousands of units sold" type="double" />
+    <Column name="exclude" type="boolean" />
+    <stream delimiter=",">
+	1975.0,16200.0,false,
+	1976.0,21800.0,false,
+	1977.0,36900.0,false,
+	1978.0,61300.0,false,
+	1979.0,82800.0,false,
+	1980.0,110200.0,false,
+	1981.0,137000.0,false,
+	1982.0,182300.0,false,
+	1983.0,236800.0,false,
+	1984.0,332000.0,false,
+	1985.0,339100.0,false,
+	1986.0,344500.0,false,
+	1987.0,410000.0,false,
+	1988.0,450100.0,false,
+	1989.0,446200.0,false,
+	1990.0,442200.0,false,
+	1991.0,360100.0,false,
+	1992.0,366400.0,false,
+	1993.0,339500.0,false,
+	1994.0,345400.0,false,
+	1995.0,272600.0,false,
+</stream>
+  </table>
+  <table name="Data Set">
+    <Column name="time" type="double" />
+    <Column name="thousands of units sold" type="double" />
+    <Column name="exclude" type="boolean" />
+    <stream delimiter=",">
+	1983.0,800.0,false,
+	1984.0,5800.0,false,
+	1985.0,22600.0,false,
+	1986.0,53000.0,false,
+	1987.0,102100.0,false,
+	1988.0,149700.0,false,
+	1989.0,207200.0,false,
+	1990.0,286500.0,false,
+	1991.0,333300.0,false,
+	1992.0,407500.0,false,
+	1993.0,495400.0,false,
+	1994.0,662100.0,false,
+	1995.0,727600.0,false,
+</stream>
+  </table>
+</LogletLabDocument>
+

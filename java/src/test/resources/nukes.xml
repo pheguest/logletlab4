@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<LogletLabDocument>
+    <TITLE>Nuclear Tests</TITLE>
+    <Table>
+        <DOMAIN>year</DOMAIN>
+        <RANGE>cumulative number of tests</RANGE>
+        <Stream Delimiter=",">
+            1945,3,false,
+            1946,5,false,
+            1947,5,false,
+            1948,8,false,
+            1949,8,false,
+            1950,8,false,
+            1951,24,false,
+            1952,34,false,
+            1953,45,false,
+            1954,51,false,
+            1955,69,false,
+            1956,87,false,
+            1957,119,false,
+            1958,196,false,
+            1959,196,false,
+            1960,196,false,
+            1961,206,false,
+            1962,302,false,
+            1963,346,false,
+            1964,384,false,
+            1965,420,false,
+            1966,463,false,
+            1967,497,false,
+            1968,542,false,
+            1969,580,false,
+            1970,615,false,
+            1971,632,false,
+            1972,650,false,
+            1973,666,false,
+            1974,680,false,
+            1975,700,false,
+            1976,718,false,
+            1977,737,false,
+            1978,754,false,
+            1979,769,false,
+            1980,783,false,
+            1981,799,false,
+            1982,817,false,
+            1983,834,false,
+            1984,851,false,
+            1985,868,false,
+            1986,882,false,
+            1987,896,false,
+            1988,910,false,
+            1989,921,false,
+            1990,929,false,
+            1991,936,false
+        </Stream>
+    </Table>
+</LogletLabDocument>

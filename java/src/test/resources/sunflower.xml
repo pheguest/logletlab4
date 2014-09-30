@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LogletLabDocument>
+  <TITLE>Growth of a Sunflower</TITLE>
+  <DOMAIN>days</DOMAIN>
+  <RANGE>height in inches</RANGE>
+  <table>
+    <stream delimiter=",">
+	7.0,17.93,false,
+	14.0,36.36,false,
+	21.0,67.76,false,
+	28.0,98.1,false,
+	35.0,131.0,false,
+	42.0,169.5,false,
+	49.0,205.5,false,
+	56.0,228.3,false,
+	63.0,247.1,false,
+	70.0,250.5,false,
+	77.0,253.8,false,
+	84.0,254.5,false,
+</stream>
+  </table>
+</LogletLabDocument>
+

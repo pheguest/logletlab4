@@ -1,0 +1,174 @@
+BODY {
+	BACKGROUND: #fff; MARGIN: 0px 0px 20px
+}
+A {
+	COLOR: #003366; TEXT-DECORATION: underline
+}
+A:link {
+	COLOR: #003366; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #003366; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #996600
+}
+A:hover {
+	COLOR: #996600
+}
+H1 {
+	FONT-SIZE: 150%; MARGIN: 5px 0px 10px; COLOR: #003366
+}
+H2 {
+	FONT-SIZE: 125%; MARGIN: 5px 0px 10px; COLOR: #006699
+}
+H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 100%; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #006699; PADDING-TOP: 0px
+}
+DT {
+	MARGIN-LEFT: 10px
+}
+.header {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 10pt; BACKGROUND: #003366; PADDING-BOTTOM: 5px; WIDTH: 100%; COLOR: #fff; PADDING-TOP: 5px; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-ALIGN: center
+}
+.header A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.header A:visited {
+	COLOR: #ffffcc; TEXT-DECORATION: none
+}
+.header A:active {
+	COLOR: #cccc99
+}
+.header A:hover {
+	COLOR: #ffcc66
+}
+.footer {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 10pt; PADDING-BOTTOM: 10px; PADDING-TOP: 10px
+}
+.bodytext {
+	MARGIN: 0px 15px 10px
+}
+.toc {
+	BORDER-RIGHT: #333 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #333 1px solid; PADDING-LEFT: 15px; BACKGROUND: #d0e8ff; PADDING-BOTTOM: 15px; BORDER-LEFT: #333 1px solid; WIDTH: 50%; PADDING-TOP: 15px; BORDER-BOTTOM: #333 1px solid
+}
+.sidebar {
+	BORDER-RIGHT: #333 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #333 1px solid; PADDING-LEFT: 15px; BACKGROUND: #e0f0ff; FLOAT: right; PADDING-BOTTOM: 15px; MARGIN: 5px; BORDER-LEFT: #333 1px solid; WIDTH: 35%; PADDING-TOP: 15px; BORDER-BOTTOM: #333 1px solid
+}
+.upload {
+	BORDER-RIGHT: #333 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #333 1px solid; PADDING-LEFT: 5px; BACKGROUND: #e8ffe8; FLOAT: right; PADDING-BOTTOM: 5px; BORDER-LEFT: #333 1px solid; WIDTH: 33%; PADDING-TOP: 5px; BORDER-BOTTOM: #333 1px solid
+}
+.welcome {
+	BORDER-RIGHT: #333 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #333 1px solid; PADDING-LEFT: 15px; BACKGROUND: #d0e8ff; PADDING-BOTTOM: 15px; BORDER-LEFT: #333 1px solid; PADDING-TOP: 15px; BORDER-BOTTOM: #333 1px solid
+}
+.featured {
+	BORDER-RIGHT: #000 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #000 1px solid; PADDING-LEFT: 15px; BACKGROUND: #ffd800; PADDING-BOTTOM: 15px; BORDER-LEFT: #000 1px solid; PADDING-TOP: 15px; BORDER-BOTTOM: #000 1px solid
+}
+.recentlyposted {
+	BORDER-RIGHT: #333 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #333 1px solid; PADDING-LEFT: 15px; BACKGROUND: #e0f0ff; PADDING-BOTTOM: 15px; BORDER-LEFT: #333 1px solid; PADDING-TOP: 15px; BORDER-BOTTOM: #333 1px solid
+}
+.recentlyposted TH {
+	FONT-SIZE: small; FONT-FAMILY: sans-serif
+}
+#banner {
+	PADDING-RIGHT: 15px; BORDER-TOP: #666 4px double; PADDING-LEFT: 15px; FONT-WEIGHT: normal; FONT-SIZE: x-large; PADDING-BOTTOM: 15px; COLOR: #333; PADDING-TOP: 15px; FONT-FAMILY: palatino,  georgia, verdana, arial, sans-serif
+}
+#banner A {
+	FONT-SIZE: xx-large; COLOR: #333; FONT-FAMILY: palatino,  georgia, verdana, arial, sans-serif; TEXT-DECORATION: none
+}
+#banner A:link {
+	FONT-SIZE: xx-large; COLOR: #333; FONT-FAMILY: palatino,  georgia, verdana, arial, sans-serif; TEXT-DECORATION: none
+}
+#banner A:visited {
+	FONT-SIZE: xx-large; COLOR: #333; FONT-FAMILY: palatino,  georgia, verdana, arial, sans-serif; TEXT-DECORATION: none
+}
+#banner A:active {
+	FONT-SIZE: xx-large; COLOR: #333; FONT-FAMILY: palatino,  georgia, verdana, arial, sans-serif; TEXT-DECORATION: none
+}
+#banner A:hover {
+	FONT-SIZE: xx-large; COLOR: #333; FONT-FAMILY: palatino,  georgia, verdana, arial, sans-serif; TEXT-DECORATION: none
+}
+.description {
+	FONT-SIZE: small; TEXT-TRANSFORM: none; COLOR: #333; FONT-FAMILY: palatino,  georgia, times new roman, serif
+}
+#content {
+	BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; BACKGROUND: #fff; MARGIN-BOTTOM: 20px; MARGIN-LEFT: 225px; BORDER-LEFT: #fff 1px solid; MARGIN-RIGHT: 20px; BORDER-BOTTOM: #fff 1px solid; POSITION: absolute
+}
+#container {
+	BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px solid; BACKGROUND: #fff; BORDER-LEFT: #fff 1px solid; BORDER-BOTTOM: #fff 1px solid
+}
+#links {
+	BORDER-RIGHT: #fff 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 15px; PADDING-BOTTOM: 15px; BORDER-LEFT: #fff 1px solid; WIDTH: 200px; PADDING-TOP: 15px; BORDER-BOTTOM: #fff 1px solid
+}
+.blog {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BACKGROUND: #fff; PADDING-BOTTOM: 15px; PADDING-TOP: 15px
+}
+.blogbody {
+	FONT-WEIGHT: normal; FONT-SIZE: small; BACKGROUND: #fff; COLOR: #333; LINE-HEIGHT: 200%; FONT-FAMILY: palatino, georgia, verdana, arial, sans-serif
+}
+.blogbody A {
+	FONT-WEIGHT: normal; TEXT-DECORATION: underline
+}
+.blogbody A:link {
+	FONT-WEIGHT: normal; TEXT-DECORATION: underline
+}
+.blogbody A:visited {
+	FONT-WEIGHT: normal; TEXT-DECORATION: underline
+}
+.blogbody A:active {
+	FONT-WEIGHT: normal; TEXT-DECORATION: underline
+}
+.blogbody A:hover {
+	FONT-WEIGHT: normal; TEXT-DECORATION: underline
+}
+.title {
+	FONT-SIZE: medium; COLOR: #666; FONT-FAMILY: palatino, georgia, times new roman, serif
+}
+#menu {
+	BACKGROUND: #fff; MARGIN-BOTTOM: 15px; TEXT-ALIGN: center
+}
+.date {
+	FONT-WEIGHT: bold; FONT-SIZE: large; MARGIN-BOTTOM: 10px; COLOR: #333; BORDER-BOTTOM: #999 1px solid; FONT-FAMILY: palatino, georgia, times new roman, serif
+}
+.posted {
+	FONT-SIZE: x-small; MARGIN-BOTTOM: 25px; COLOR: #000000; FONT-FAMILY: verdana, arial, sans-serif
+}
+.calendar {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: normal; FONT-SIZE: x-small; BACKGROUND: #fff; PADDING-BOTTOM: 2px; COLOR: #666; LINE-HEIGHT: 140%; PADDING-TOP: 2px; FONT-FAMILY: verdana, arial, sans-serif; TEXT-ALIGN: left
+}
+.calendarhead {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: normal; FONT-SIZE: small; BACKGROUND: #fff; PADDING-BOTTOM: 2px; TEXT-TRANSFORM: uppercase; COLOR: #666600; PADDING-TOP: 2px; FONT-FAMILY: palatino, georgia, times new roman, serif; LETTER-SPACING: 0.3em; TEXT-ALIGN: left
+}
+.side {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-WEIGHT: normal; FONT-SIZE: x-small; BACKGROUND: #fff; PADDING-BOTTOM: 2px; COLOR: #333; LINE-HEIGHT: 140%; PADDING-TOP: 2px; FONT-FAMILY: verdana, arial, sans-serif
+}
+.sidetitle {
+	PADDING-RIGHT: 2px; MARGIN-TOP: 30px; PADDING-LEFT: 2px; FONT-WEIGHT: normal; FONT-SIZE: small; BACKGROUND: #fff; PADDING-BOTTOM: 2px; TEXT-TRANSFORM: uppercase; COLOR: #666600; PADDING-TOP: 2px; FONT-FAMILY: palatino, georgia, times new roman, serif; LETTER-SPACING: 0.3em
+}
+.syndicate {
+	PADDING-RIGHT: 2px; MARGIN-TOP: 15px; PADDING-LEFT: 2px; FONT-SIZE: xx-small; BACKGROUND: #fff; PADDING-BOTTOM: 2px; LINE-HEIGHT: 140%; PADDING-TOP: 2px; FONT-FAMILY: verdana, arial, sans-serif
+}
+.powered {
+	PADDING-RIGHT: 2px; MARGIN-TOP: 50px; PADDING-LEFT: 2px; FONT-SIZE: x-small; BACKGROUND: #fff; PADDING-BOTTOM: 2px; TEXT-TRANSFORM: uppercase; COLOR: #666; LINE-HEIGHT: 140%; PADDING-TOP: 2px; FONT-FAMILY: palatino, georgia, times new roman, serif; LETTER-SPACING: 0.2em
+}
+.comments-body {
+	FONT-WEIGHT: normal; FONT-SIZE: small; BACKGROUND: #fff; PADDING-BOTTOM: 10px; COLOR: #666; LINE-HEIGHT: 140%; PADDING-TOP: 10px; BORDER-BOTTOM: #999 1px dotted; FONT-FAMILY: palatino, georgia, verdana, arial, sans-serif
+}
+.comments-post {
+	FONT-WEIGHT: normal; FONT-SIZE: x-small; BACKGROUND: #fff; COLOR: #666; FONT-FAMILY: verdana, arial, sans-serif
+}
+.trackback-url {
+	BORDER-RIGHT: #999 1px dotted; PADDING-RIGHT: 5px; BORDER-TOP: #999 1px dotted; PADDING-LEFT: 5px; FONT-WEIGHT: normal; FONT-SIZE: small; BACKGROUND: #fff; PADDING-BOTTOM: 5px; BORDER-LEFT: #999 1px dotted; COLOR: #666; LINE-HEIGHT: 140%; PADDING-TOP: 5px; BORDER-BOTTOM: #999 1px dotted; FONT-FAMILY: palatino, georgia, verdana, arial, sans-serif
+}
+.trackback-body {
+	FONT-WEIGHT: normal; FONT-SIZE: small; BACKGROUND: #fff; PADDING-BOTTOM: 10px; COLOR: #666; LINE-HEIGHT: 140%; PADDING-TOP: 10px; BORDER-BOTTOM: #999 1px dotted; FONT-FAMILY: palatino, georgia, verdana, arial, sans-serif
+}
+.trackback-post {
+	FONT-WEIGHT: normal; FONT-SIZE: x-small; BACKGROUND: #fff; COLOR: #666; FONT-FAMILY: verdana, arial, sans-serif
+}
+.comments-head {
+	MARGIN-TOP: 20px; FONT-WEIGHT: bold; FONT-SIZE: small; BACKGROUND: #fff; COLOR: #666; BORDER-BOTTOM: #999 1px solid; FONT-FAMILY: palatino, georgia, verdana, arial, sans-serif
+}
+#banner-commentspop {
+	BORDER-RIGHT: #fff 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 15px; FONT-WEIGHT: bold; FONT-SIZE: large; BACKGROUND: #003366; PADDING-BOTTOM: 5px; BORDER-LEFT: #fff 1px solid; COLOR: #fff; PADDING-TOP: 5px; FONT-FAMILY: palatino, georgia, verdana, arial, sans-serif
+}
