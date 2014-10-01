@@ -1,0 +1,21 @@
+/**********************************************************************/ 
+/*                                                                    */
+/* javascript constrained non-linear regression library               */
+/* (for fitting logistic curves ("loglets") to data)                  */
+/*                                                                    */
+/* Copyright (C) 2010  The Rockefeller University, NY, NY.            */
+/* All Rights Reserved                                                */
+/*                                                                    */
+/* Javscript code written by Perrin S. Meyer, based on the            */
+/* "loglet lab" software sponsored by http://phe.rockefeller.edu      */ 
+/*                                                                    */
+/* These javascript library functions are licensed under the          */
+/* GNU Lesser (Library) General Public License version 2.1 (LGPL 2.1) */
+/* http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt              */
+/*                                                                    */
+/*     email me to discuss other license options.                     */
+/*                                                                    */
+/*     p e r r i n m e y e r _at_ y a h o o _dot_ c o m               */
+/*                                                                    */
+/**********************************************************************/ 
+

@@ -1,0 +1,152 @@
+<html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<body>
+
+<!-- BEGIN javascript source code copyright and licensing information --> 
+
+<!-- This javascript code is Copyright (C) 2009 The Rockefeller University, NY, NY. -->
+<!-- The code is licensed under the GNU LGPL 2.1, see soure for details -->
+<script type="text/javascript" src="psmlogfunc3.js"></script>
+
+<!-- This javascript code is Copyright (C) 2009 The Rockefeller University, NY, NY. -->
+<!-- The code is licensed under the GNU LGPL 2.1, see soure for details -->
+<script type="text/javascript" src="Xpsmlogfunc3.js"></script>
+
+<!-- this javascript code is copyright and licensed by its owners, http://jquery.com -->
+<!-- see source for details -->
+<script language="javascript" type="text/javascript" src="jquery.js"></script>
+
+<!-- this code is copyright and licensed by its owners, http://code.google.com/p/flot/ -->
+<!-- see source for details --> 
+<script language="javascript" type="text/javascript" src="jquery.flot.js"></script>
+
+<!-- this code is copyright and licensed by its owners -->
+<!-- http://www.netgrow.com.au/assets/files/jquery_plugins/jquery.dump.js -->
+<!-- see source for details --> 
+<!-- no longer needed -->
+<!-- <script language="javascript" type="text/javascript" src="jquery.dump.js"></script> -->
+
+<!-- END javascript source code copyright and licensing information --> 
+
+
+<h1>Loglet Lab 3.0 Javascript Edition <h1>
+<h2><a href="http://lizardinthesun.com/cloudblog/" target="_blank">Documentation</a></h2>
+
+(<i>beta release 2.2</i>)   20 October 2010<br>
+(<i>note: only Chrome and Safari browsers work currently. Firefox and IE8 do not work</i>)
+<p>
+<font size="-2"><i>All code Copyright (C) 2010 The Rockefeller University, NY, NY. <br>
+Licensed under the GNU LGPL 2.1 (unless otherwise 
+noted, see source and <tt><a href="LICENSE.TXT">LICENSE.TXT</a></tt> for details)</i></font><p>
+<hr>
+<b>Data - Step 1</b><p>
+Choose an example dataset from this list: 
+<select id="filldata" name="psmselect">
+  <option>sunflower</option>
+  <option>lotka_publications</option>
+  <option>rembrandt</option>
+  <option>van_gogh</option>
+  <option>boom</option>
+  <option>university</option>
+  <option>downward</option>
+  <option>user data</option>
+</select>
+<br>
+and then click the button "step 1 - create data table"
+<p>
+
+<!-- not really needed anymore 
+<table>
+  <tr><td>filename: (for debugging only)</td>
+  <td><input type="text" id="JSONfilename" size=20></td>
+  </tr></input>
+</table>
+-->
+<p>
+
+<b>OR</b><p>
+
+Choose "user data" above, and then paste data from Excel or Google Spreadsheets into this box. <br>
+You can also type the data in directly. Data format is two columns (rows of (x,y) pairs).<br>
+Then click the button "step 1 - create data table"<br>
+<textarea id="psmtext" rows=24 cols=72> </textarea>
+
+<h6>(NOTE: numbers must be separted by tabs or commas (not spaces). )</h6>
+
+<p>
+<input type="button" value="step 1 - create data table" onclick="psmcreateform()">
+
+<hr>
+<div id="DOM2"></div>
+
+<hr>
+<p>
+<b>Model Selection and Parameter Constraints - Step 2</b><br>
+<table>
+<tr><td><input type="radio" checked id="1logletradio" name="logletradio"> Single Logistic Pulse</td></tr>
+<tr><td><input type="radio"  id="2logletradio" name="logletradio"> Bi-Logistic</td></tr>
+<tr><td><input type="radio"  id="3logletradio" name="logletradio"> Tri-Logistic</td></tr>
+</table>
+
+<font size="-1">(choose an upper and lower bound on the logistic parameters, or use button to guess. The
+guess might be wildly wrong, especially for a tri-logistic)</font>
+<p>
+<div id="constraints"></div>
+
+
+<p>
+<input type ="button" value="Step 2 - load or reset constraints" onclick="create_constraints()">
+<input type="button" value="guess constraints" onclick="guessconstraints()">
+<p><hr>
+<b>Model Parameter Estimation and Plotting - Step 3</b><p>
+<input type ="button" value="Step 3 - Fit Model" onclick="Xpsmlogfunc()">
+<p>
+(regression algorithm parameters) <br>
+<table>
+<tr>
+<td><input type="radio" checked id="leastsquares" name="norm">L2 norm (least squares)</td>
+</tr>
+<tr>
+<td><input type="radio" id="robust" name="norm">L1 norm (robust)</td>
+</tr>
+</table>
+<input type="text" value="5e3" id="MCiter" size=8> Monte-Carlo iterations<br>
+<input type="text" value="25" id="anneal" size=8>  anneal sample size<br>
+<input type="text" value="3" id="num_anneal" size=8>  anneal iterations<br>
+
+<table>
+<tr>
+<td><input type="radio" id="psmradio1" name="psmradio">export data with tabs (for Excel, spreadsheets)</td>
+</tr>
+<tr>
+<td><input type="radio" checked id="psmradio2" name="psmradio">export data with comma's (matlab)</td>
+</tr>
+</table>
+<br>
+(plot size)<br>
+<input type="text" value="800" id="flotwidth" size=8>Plot Width<br>
+<input type="text" value="400" id="flotheight" size=8>Plot Height<br>
+<input type="checkbox" checked id="plotfit">plot fit<br>
+<input type="checkbox" checked id="plotfp">plot Fisher-Pry<br>
+<input type="checkbox" checked id="plotcc">plot component logsitics <br>
+<input type="checkbox" checked id="plotres">plot Standardized Residuals<br>
+
+
+<hr>
+
+<!-- where the flot plots go -->
+<div id="flotplots"> </div>
+
+
+<hr>
+<div id="logletParameters"></div>
+
+<hr>
+<b>Raw Number Output (for replotting in Matlab or Excel)</b><p>
+<textarea id="psmoutput" rows=25 cols=72> </textarea>
+
+
+
+</body>
+</html>
+
