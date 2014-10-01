@@ -26,13 +26,13 @@ History
 Loglet Lab had its roots in some C and MATLAB code that Perrin Meyer had written.
 
 *Loglet Lab 1* took Perrin's code into Visual C++ to provide a visual interface
-for Windows (primarily NT/95/98).
+for Windows (primarily NT/95/98). (original C code now in "legacy_c_code" directory).
 
 *Loglet Lab 2* ported the work in LL1 to Java for cross-platform use 
 (Windows/Mac/Linux).
 
 *Loglet Lab 3* rewrote the code with a web interface to provide logistic analysis
-to your web browser.
+to your web browser. (this code now in the "javascript" directory). 
 
 The objective of *Loglet Lab 4* is to take the web accessibility of LL3,
 implement the full feature sets of LL1 and LL2,
