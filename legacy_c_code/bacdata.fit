@@ -1,0 +1,33 @@
+// psm 3-12-96, 
+
+-initial
+{
+2 70 3
+}
+
+-save bac1
+-noisy
+-plot
+
+// data from a bacterial colony, from Feller 1940
+// data from H.G. Thornton (pp. 55)
+-data
+{
+0 0.24
+1 2.78
+2 13.53
+3 36.30
+4 47.50
+5 49.40
+}
+
+
+
+
+
+
+
+
+
+
+
