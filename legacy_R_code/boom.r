@@ -1,4 +1,7 @@
-# use source("psm3.r")
+## cameron -- this R code fits a bilogistic to the us cummulative nuclear tests data
+## which also exists in the javascript version (boom.json). 
+# use 
+# > source("boom.r")
 # to load this file 
 
 ## this function seems to clear the workspace
