@@ -1,3 +1,5 @@
+#Test from CC
+
 source(file="linspace.R")
 source(file="loglet_func.R")
 
