@@ -11,7 +11,11 @@ source(file="loglet_func.R")
 
 logobj.parameters.a0 <- 40
 logobj.parameters.k0 <- 200
-logobj.parameters.b0 <- 1
+logobj.parameters.b0 <- 30
+
+a <- logobj.parameters.a0
+k <- logobj.parameters.k0
+b <- logobj.parameters.b0
 
 i <- 0
 j <- 0
@@ -25,7 +29,10 @@ xstart = logobj.parameters.b0 - sl * logobj.parameters.a0
 
 ########## IS THIS DETERMINED BY THE USER??
 logobj.number_of_loglets = 1 
-logobj.parameters = 5 
+
+####logobj.parameters = 0 
+logobj.parameters = 5
+####logobj.parameters <- c()
 
 xstop =  logobj.parameters[b+(logobj.number_of_loglets-1)] + sl * logobj.parameters[a+(logobj.number_of_loglets -1)]
 
@@ -36,6 +43,9 @@ logobj.curve.n = 6
   ###### the main curve ######## 
   logobj.curve.t = linspace(xstart,xstop,logobj.curve.n); 
   logobj.curve.t.length = length(logobj.curve.t) 
+
+  logobj.curve.yfit <- c()
+  ###logobj.curve.yfit <- 0
 
   while(i < logobj.curve.t.length) {
     logobj.curve.yfit[i] = 0;
@@ -58,6 +68,10 @@ logobj.curve.n = 6
 logobj.data.x.length = length(logobj.data.x)
 
   #### the residuals ##### 
+
+  logobj.data.yfit <- c()  
+  logobj.data.residuals <- c()
+
   while(i < logobj.data.x.length) {
     logobj.data.yfit[i] = 0
     logobj.data.residuals[i] = 0
@@ -103,6 +117,7 @@ logobj.data.x.length = length(logobj.data.x)
 
   sd = sqrt( (1 / (N -1)) * sd);
 
+  logobj.data.sr <- c()
   iter = 0
   while (iter < N) {
     logobj.data.sr[iter] = (logobj.data.residuals[iter] - mean) / sd
@@ -150,16 +165,17 @@ logobj.data.x.length = length(logobj.data.x)
   j = 0
   while (j < logobj.number_of_loglets) {
     fp[a+j] = logobj.parameters[a+j]
+    ####print(fp[a+j])
     fp[k+j] = logobj.parameters[k+j]
     fp[b+j] = logobj.parameters[b+j]
     j = j + 1
   }
-
+#######stop()
 
   ##### makes the fisher pry plots look right ##### 
   j = 0
   while (j < logobj.number_of_loglets) {
-    if (fp[a+j] > 0.0 && fp[k+j] < 0.0 ) {
+    if ( (fp[a+j] > 0.0) && (fp[k+j] < 0.0) ) {
       fp[a+j] = -1.0 * fp[a+j]
       fp[k+j] = -1.0 * fp[k+j]
     }
@@ -341,9 +357,10 @@ logobj.data.x.length = length(logobj.data.x)
       #### THIS LINE IS A PROBLEM logobj.flot[cccurve+j].push([cc[xl+j][i],cc[yl+j][i]])
       #### THIS LINE IS A PROBLEM logobj.cc[linex+j].push(cc[xl+j][i])
       #### THIS LINE IS A PROBLEM logobj.cc[liney+j].push(cc[yl+j][i])
-      logobj.flot[cccurve+j] <- union(logobj.flot[cccurve+j], c(cc[xl+j][i], cc[yl+j][i])
-      logobj.cc[linex+j] <- union(logobj.cc[linex+j], c(cc[xl+j][i]))
-      logobj.cc[liney+j] <- union(logobj.cc[liney+j], c(cc[yl+j][i]))
+      
+      ###logobj.flot[cccurve+j] <- union(logobj.flot[cccurve+j], c(cc[xl+j][i], cc[yl+j][i])
+      ###logobj.cc[linex+j] <- union(logobj.cc[linex+j], c(cc[xl+j][i]))
+      ###logobj.cc[liney+j] <- union(logobj.cc[liney+j], c(cc[yl+j][i]))
       i = i + 1
     }
   j = j + 1

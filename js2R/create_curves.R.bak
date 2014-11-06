@@ -1,29 +1,21 @@
 source(file="linspace.R")
 source(file="loglet_func.R")
 
-#VARIABLES TO BE PASSED IN... A, K, B
-####a = 5
-####k = 6
-####b = 7
-####logobj.parameters.a0
-####logobj.parameters.k0 (???)
-####logobj.parameters.b0
-
-logobj.parameters.a0 <- 40
-logobj.parameters.k0 <- 200
-logobj.parameters.b0 <- 1
+#VARIABLES TO BE PASSED IN...
+a = 5
+k = 6
+b = 7
 
 i <- 0
 j <- 0
 
 sl = 1.2
 
-logobj.data.x = c(7.0, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84)
-logobj.data.y = c(17.93, 36.36, 67.76, 98.1, 131, 169.5, 205.5, 228.3, 247.1, 250.5, 253.8, 254.5)
+logobj.parameters.b0 = 7 
+logobj.parameters.a0 = 5 
 
 xstart = logobj.parameters.b0 - sl * logobj.parameters.a0
 
-########## IS THIS DETERMINED BY THE USER??
 logobj.number_of_loglets = 1 
 logobj.parameters = 5 
 
@@ -54,7 +46,7 @@ logobj.curve.n = 6
   i = i + 1
   }
 
-#####logobj.data.x = 0
+logobj.data.x = 0
 logobj.data.x.length = length(logobj.data.x)
 
   #### the residuals ##### 
@@ -79,7 +71,6 @@ logobj.data.x.length = length(logobj.data.x)
   }
 
 
-##########HOW ABOUT THESE ##############
   mean = 0.0;
   tmpsum = 0.0;
   N = logobj.data.x.length;
