@@ -13,9 +13,10 @@ logobj.parameters.a0 <- 40
 logobj.parameters.k0 <- 200
 logobj.parameters.b0 <- 30
 
-a <- logobj.parameters.a0
-k <- logobj.parameters.k0
-b <- logobj.parameters.b0
+#### psm
+a0 <- logobj.parameters.a0
+k0 <- logobj.parameters.k0
+b0 <- logobj.parameters.b0
 
 i <- 0
 j <- 0
@@ -51,18 +52,16 @@ logobj.curve.n = 6
     logobj.curve.yfit[i] = 0;
     i = i + 1
   }
+  ## psm for example 
   while(i<logobj.curve.t.length) {
     while(j < logobj.number_of_loglets) {
       logobj.curve.yfit[i] = logobj.curve.yfit[i] + 
-        loglet(logobj.curve.t[i],
-               logobj.parameters[a+j],
-               logobj.parameters[k+j],
-               logobj.parameters[b+j])
-      logobj.curve.yfit[i] = logobj.curve.yfit[i] + logobj.parameters[d]
+        loglet(logobj.curve.t[i],a0,k0,b0)
       j = j + 1
     }
   i = i + 1
   }
+
 
 #####logobj.data.x = 0
 logobj.data.x.length = length(logobj.data.x)
