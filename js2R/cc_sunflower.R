@@ -2,7 +2,8 @@
 ########## INPUT FROM USER ############
 #######################################
 ## FONT STYLE
-titleFont <- "GillSans"
+## psm -- i cant seem to figure out how to install gillsans on linux(opensuse), any suggestions?
+##titleFont <- "GillSans"
 
 ## A, K, B
 midpoint1 <- "3"
@@ -99,7 +100,7 @@ sunlogistic <- nls(sy ~ ( k / (1 + exp( (log(81)/-a) * (sx - b)))),start=c(k=250
 #############################
 
 ####FOR PDF#####
-pdf('singleRegression.pdf', family=titleFont)
+pdf('singleRegression.pdf')
 plot(sx,sy, axes=TRUE, ann=FALSE, col=color4)
 #### newx is the span of x in the plot.  Hardcoded for now.  This will have to become 
 #### dynamic in order to accomodate all datasets.
@@ -121,6 +122,9 @@ title(xlab=xaxis, col.lab=color2)
 title(ylab=yaxis, col.lab=color3)
 title(sub=paste("a: ", growthRate1, "k: ", carryingCap1, "b: ", midpoint1))
 sunlogistic
+
+## psm  -- the plot labels are incorrect but it must be an easy bug since 
+## you have the correct values in the comment above 
 
 ##### TURN OFF THE IMAGE CREATION DEVICE #####
 dev.off()
