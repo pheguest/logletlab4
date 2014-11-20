@@ -86,6 +86,13 @@ sunlogistic <- nls(sy ~ ( k / (1 + exp( (log(81)/-a) * (sx - b)))),start=c(k=car
 ## 261.04  50.10  34.27 
 ## residual sum-of-squares: 127.1
 
+## ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+##    PSM -- these are the fitted parameters!!!!!!!
+## 
+growthrate1 <- sunlogistic()
+
+growthrate1 should be 50.1
+
 ## Number of iterations to convergence: 5 
 ## Achieved convergence tolerance: 3.069e-06
 
@@ -110,6 +117,9 @@ title(xlab=xaxis, col.lab=color2)
 title(ylab=yaxis, col.lab=color3)
 title(sub=paste("a:",growthRate1, "   k:",carryingCap1, "   b:",midpoint1))
 sunlogistic
+
+
+
 
 ####FOR JPEG#####
 jpeg('singleRegression.jpg')
