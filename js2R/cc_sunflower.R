@@ -2,13 +2,12 @@
 ########## INPUT FROM USER ############
 #######################################
 ## FONT STYLE
-## psm -- i cant seem to figure out how to install gillsans on linux(opensuse), any suggestions?
-##titleFont <- "GillSans"
+titleFont <- "GillSans"
 
 ## A, K, B
-midpoint1 <- "3"
-carryingCap1 <- "2"
-growthRate1 <- "1"
+midpoint1 <- "30"
+carryingCap1 <- "250"
+growthRate1 <- "40"
 
 ## SINGLE, BI, TRI ANALYSIS
 analysisType <- "single"
@@ -77,7 +76,7 @@ sunlinear <- lm(sy ~ sx)
 ## (Intercept)           sx  
 ##      6.287        3.452 
 
-sunlogistic <- nls(sy ~ ( k / (1 + exp( (log(81)/-a) * (sx - b)))),start=c(k=250, a=40, b=30))
+sunlogistic <- nls(sy ~ ( k / (1 + exp( (log(81)/-a) * (sx - b)))),start=c(k=carryingCap1, a=growthRate1, b=midpoint1))
 
 #### PRINTING sunlinear at this point shows the following (a, k, b seem correctly predicted):
 ## Nonlinear regression model
@@ -100,7 +99,7 @@ sunlogistic <- nls(sy ~ ( k / (1 + exp( (log(81)/-a) * (sx - b)))),start=c(k=250
 #############################
 
 ####FOR PDF#####
-pdf('singleRegression.pdf')
+pdf('singleRegression.pdf', family=titleFont)
 plot(sx,sy, axes=TRUE, ann=FALSE, col=color4)
 #### newx is the span of x in the plot.  Hardcoded for now.  This will have to become 
 #### dynamic in order to accomodate all datasets.
@@ -109,7 +108,7 @@ lines(newx,predict(sunlogistic,newdata=data.frame(sx=newx)),lwd=2, col=color1)
 title(main=plotTitle, col.main=color5, font.main=4)
 title(xlab=xaxis, col.lab=color2)
 title(ylab=yaxis, col.lab=color3)
-title(sub=paste("a: ", growthRate1, "k: ", carryingCap1, "b: ", midpoint1))
+title(sub=paste("a:",growthRate1, "   k:",carryingCap1, "   b:",midpoint1))
 sunlogistic
 
 ####FOR JPEG#####
@@ -120,11 +119,8 @@ lines(newx,predict(sunlogistic,newdata=data.frame(sx=newx)),lwd=2, col=color1)
 title(main=plotTitle, col.main=color5, font.main=4)
 title(xlab=xaxis, col.lab=color2)
 title(ylab=yaxis, col.lab=color3)
-title(sub=paste("a: ", growthRate1, "k: ", carryingCap1, "b: ", midpoint1))
+title(sub=paste("a:",growthRate1, "   k:",carryingCap1, "   b:",midpoint1))
 sunlogistic
-
-## psm  -- the plot labels are incorrect but it must be an easy bug since 
-## you have the correct values in the comment above 
 
 ##### TURN OFF THE IMAGE CREATION DEVICE #####
 dev.off()
