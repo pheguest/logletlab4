@@ -89,13 +89,18 @@ sunlogistic <- nls(sy ~ ( k / (1 + exp( (log(81)/-a) * (sx - b)))),start=c(k=car
 ## ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ##    PSM -- these are the fitted parameters!!!!!!!
 ## 
-growthrate1 <- sunlogistic()
+###growthrate1 <- sunlogistic()
 
-growthrate1 should be 50.1
+###growthrate1 should be 50.1
 
 ## Number of iterations to convergence: 5 
 ## Achieved convergence tolerance: 3.069e-06
 
+sum_sun <- summary(sunlogistic)
+names(sum_sun)
+carryingCapCalc1 <- round(sum_sun$parameters[[1]], 2)
+growthRateCalc1 <- round(sum_sun$parameters[[2]], 2)
+midpointCalc1 <-round(sum_sun$parameters[[3]], 2)
 
 #############################
 #### GENERATE IMAGES ########
@@ -115,7 +120,7 @@ lines(newx,predict(sunlogistic,newdata=data.frame(sx=newx)),lwd=2, col=color1)
 title(main=plotTitle, col.main=color5, font.main=4)
 title(xlab=xaxis, col.lab=color2)
 title(ylab=yaxis, col.lab=color3)
-title(sub=paste("a:",growthRate1, "   k:",carryingCap1, "   b:",midpoint1))
+title(sub=paste("a:",growthRateCalc1, "   k:",carryingCapCalc1, "   b:",midpointCalc1))
 sunlogistic
 
 
@@ -129,7 +134,7 @@ lines(newx,predict(sunlogistic,newdata=data.frame(sx=newx)),lwd=2, col=color1)
 title(main=plotTitle, col.main=color5, font.main=4)
 title(xlab=xaxis, col.lab=color2)
 title(ylab=yaxis, col.lab=color3)
-title(sub=paste("a:",growthRate1, "   k:",carryingCap1, "   b:",midpoint1))
+title(sub=paste("a:",growthRateCalc1, "   k:",carryingCapCalc1, "   b:",midpointCalc1))
 sunlogistic
 
 ##### TURN OFF THE IMAGE CREATION DEVICE #####
