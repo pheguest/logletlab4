@@ -2,7 +2,9 @@
 ########## INPUT FROM USER ############
 #######################################
 ## FONT STYLE
+if (!exists("perrin")) {
 titleFont <- "GillSans"
+}
 
 ## A, K, B
 midpoint1 <- "30"
@@ -102,6 +104,28 @@ carryingCapCalc1 <- round(sum_sun$parameters[[1]], 2)
 growthRateCalc1 <- round(sum_sun$parameters[[2]], 2)
 midpointCalc1 <-round(sum_sun$parameters[[3]], 2)
 
+k1 <- round(sum_sun$parameters[[1]], 2)
+a1 <- round(sum_sun$parameters[[2]], 2)
+b1 <-round(sum_sun$parameters[[3]], 2)
+
+cat("k1 = ",k1,"\n")
+cat("a1 = ",a1,"\n")
+cat("b1 = ",b1,"\n")
+
+sl <- 1.2  ## slice factor (makes generated fitted curves/lines longer or shorter
+xstart <- b1 - (sl * a1)
+xstop  <- b1 + (sl * a1)
+
+cat("xstart = ",xstart,"\n")
+cat("xstop = ",xstop,"\n")
+
+## this should help explain line 48 of create_curves.10062014-new.R
+## newx  <- seq(1,200,length=200)
+## can now be DYNAMIC
+## newx  <- seq(xstart,xstop,length=200)
+
+
+
 #############################
 #### GENERATE IMAGES ########
 ## Note: This is using R's ##
@@ -111,11 +135,12 @@ midpointCalc1 <-round(sum_sun$parameters[[3]], 2)
 #############################
 
 ####FOR PDF#####
-pdf('singleRegression.pdf', family=titleFont)
+if (!exists("perrin")){pdf('singleRegression.pdf', family=titleFont)}
+if (exists("perrin")){pdf('singleRegression.pdf')}
 plot(sx,sy, axes=TRUE, ann=FALSE, col=color4)
 #### newx is the span of x in the plot.  Hardcoded for now.  This will have to become 
 #### dynamic in order to accomodate all datasets.
-newx  <- seq(1,200,length=200)
+newx  <- seq(xstart,xstop,length=200)
 lines(newx,predict(sunlogistic,newdata=data.frame(sx=newx)),lwd=2, col=color1)
 title(main=plotTitle, col.main=color5, font.main=4)
 title(xlab=xaxis, col.lab=color2)
@@ -129,7 +154,7 @@ sunlogistic
 ####FOR JPEG#####
 jpeg('singleRegression.jpg')
 plot(sx,sy, axes=TRUE, ann=FALSE, col=color4)
-newx  <- seq(1,200,length=200)
+newx  <- seq(xstart,xstop,length=200)
 lines(newx,predict(sunlogistic,newdata=data.frame(sx=newx)),lwd=2, col=color1)
 title(main=plotTitle, col.main=color5, font.main=4)
 title(xlab=xaxis, col.lab=color2)
