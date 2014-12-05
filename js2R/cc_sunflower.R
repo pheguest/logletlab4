@@ -98,6 +98,20 @@ sunlogistic <- nls(sy ~ ( k / (1 + exp( (log(81)/-a) * (sx - b)))),start=c(k=car
 ## Number of iterations to convergence: 5 
 ## Achieved convergence tolerance: 3.069e-06
 
+## GET THE SUNLOGISTIC RESIDUALS, WRITE THEM TO A FILE, AND PLOT THEM ########
+myResiduals <- residuals(sunlogistic)
+sink("residuals.txt", append=FALSE, split=FALSE)
+writeLines(formatOL(myResiduals))
+sink()
+
+resCols <- c(sx, myResiduals)
+dfRes = data.frame(sx, myResiduals)
+ggplot(dfRes, aes(x=sx, y=myResiduals)) + geom_line() + xlab(xaxis) + ylab("Residual Value") + geom_point(colour="#00B3FF") + ggtitle("Residuals")
+ggsave(file="ggplotResiduals.pdf")
+ggsave(file="ggplotResiduals.jpg", width = 4, height = 4, dpi = 75, scale = 2)
+
+## END SUNLOGISTIC RESIDUALS ########
+
 sum_sun <- summary(sunlogistic)
 names(sum_sun)
 carryingCapCalc1 <- round(sum_sun$parameters[[1]], 2)
@@ -165,3 +179,16 @@ sunlogistic
 ##### TURN OFF THE IMAGE CREATION DEVICE #####
 dev.off()
 
+##### PLOT USING GGPLOT ######
+## FIT THE CURVE
+fitted = data.frame(sx=newx, sy=predict(sunlogistic, data.frame(sx=newx)) )
+
+## PLOT THE CURVE
+plotted <- ggplot(data=fileContents, aes(x=sx, y=sy,)) + geom_point(colour=color4,size=3) + geom_line(data=fitted, colour=color1)
+
+## ADD FORMATTING OPTIONS
+plotted + ylab(yaxis) + xlab(xaxis) + ggtitle(plotTitle) + theme(plot.title = element_text(size=24, family=titleFont, face="bold", colour=color5, vjust=1.5), axis.title.x = element_text(family=titleFont, face="bold", colour=color2, size=20), axis.text.x = element_text(angle=90, vjust=0.5, size=12), axis.title.y = element_text(family=titleFont, face="bold", colour=color3, size=20), axis.text.y = element_text(angle=90, vjust=0.5, size=12))
+
+## SAVE THE GGPLOT AS A JPG AND PDF
+ggsave(file="ggplotNLS.jpg", width = 4, height = 4, dpi = 75, scale = 2)
+ggsave(file="ggplotNLS.pdf")
