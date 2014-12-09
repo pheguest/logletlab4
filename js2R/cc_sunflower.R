@@ -65,6 +65,13 @@ sx = fileContents[,1]
 ## ALL THE X-AXIS VALUES (IN THE CASE OF SUNFLOWER, HEIGHT))
 sy = fileContents[,2]
 
+
+##### INITIAL ESTIMATES FOR A, K, B BASED ON THE DATA #######
+estimateA = (max(sx) - min(sx))
+estimateK = max(sy) * 1.1
+estimateB = (max(sx) + min(sx))/2
+
+
 ###########################################
 #### DEFINE sunlinear AND sunlogistic #####
 ###########################################
@@ -78,7 +85,10 @@ sunlinear <- lm(sy ~ sx)
 ## (Intercept)           sx  
 ##      6.287        3.452 
 
-sunlogistic <- nls(sy ~ ( k / (1 + exp( (log(81)/-a) * (sx - b)))),start=c(k=carryingCap1, a=growthRate1, b=midpoint1))
+#### WITH USER INPUT FOR A, K, B ###sunlogistic <- nls(sy ~ ( k / (1 + exp( (log(81)/-a) * (sx - b)))),start=c(k=carryingCap1, a=growthRate1, b=midpoint1))
+
+#### WITH PREDICTED A, K, B
+sunlogistic <- nls(sy ~ ( k / (1 + exp( (log(81)/-a) * (sx - b)))),start=c(k=estimateK, a=estimateA, b=estimateB))
 
 #### PRINTING sunlinear at this point shows the following (a, k, b seem correctly predicted):
 ## Nonlinear regression model
