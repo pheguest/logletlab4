@@ -72,10 +72,24 @@ estimateK = max(sy) * 1.1
 estimateB = (max(sx) + min(sx))/2
 
 
-###########################################
-#### DEFINE sunlinear AND sunlogistic #####
-###########################################
+##### STANDARDIZED RESIDUALS ######
 sunlinear <- lm(sy ~ sx)
+stdres <- rstandard(sunlinear)
+SLRes <- data.frame(sx, stdres)
+ggplot(SLRes, aes(x=sx, y=stdres)) + xlab(xaxis) + ylab("Residual Value") + geom_point(colour=color4, size=3) + ggtitle("Standardized Residuals") + geom_abline(colour = "red", size = 2)
+ggsave(file="ggplotStandardResiduals.pdf")
+ggsave(file="ggplotStandardResiduals.jpg", width = 4, height = 4, dpi = 75, scale = 2)
+
+pdf('standardizedResiduals.pdf', family=titleFont)
+plot(sx, stdres, xlab=xaxis, main="Standardized Residuals")
+jpeg('standardizedResiduals.jpg', family=titleFont)
+plot(sx, stdres, xlab=xaxis, main="Standardized Residuals")
+abline(0, 0) # the horizon
+##### END STANDARDIZED RESIDUALS ######
+
+###########################################
+#### DEFINE sunlogistic ###################
+###########################################
 
 #### PRINTING sunlinear at this point shows the following:
 ## Call:
